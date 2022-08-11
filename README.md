@@ -1,1 +1,1 @@
-# dnn
+# python-beginner-projects
