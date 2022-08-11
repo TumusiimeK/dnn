@@ -27,6 +27,7 @@ for i in range(0, output.shape[0]):
     confidence = output[i, 2]    # Get the confidence
      # If confidence is above 50%, draw the surrounding box
     if confidence > 0.5:
+        # Upscale surrounding box coordinates to the original image
         box = output[i, 3:7]*np.array([width, height, width, height])
         # Covert to integers
         start_x, start_y, end_x, end_y = box.astype(np.int)
